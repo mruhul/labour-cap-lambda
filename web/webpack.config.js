@@ -1,5 +1,7 @@
 var autoprefixer = require('autoprefixer');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
+var CleanWebpackPlugin = require('clean-webpack-plugin');
+var CopyWebpackPlugin = require('copy-webpack-plugin');
 var path = require('path');
 var webpack = require('webpack');
 
@@ -47,8 +49,20 @@ var config = {
     root: [path.join(__dirname, './src')]
   },
   plugins: [
-        new ExtractTextPlugin("[name].css"),
-        new webpack.optimize.UglifyJsPlugin({minimize: true})
+      new CopyWebpackPlugin([
+        {
+          from: './src/*.html',
+          to: path.join(__dirname, './dist'),
+          flatten: true
+        }
+      ]),
+      new ExtractTextPlugin("[name].css"),
+      new webpack.optimize.UglifyJsPlugin({minimize: true}),
+      new CleanWebpackPlugin(['dist', 'build'], {
+        root: __dirname,
+        verbose: true,
+        dry: false
+      })
     ]
 };
 
