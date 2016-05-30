@@ -1,0 +1,113 @@
+h1,h2,h3,h4,h5,body{
+  padding: 0;
+  margin: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: normal;
+}
+
+body{
+  text-align: center;
+  font-size: 100%;
+  font-weight: normal;
+  font-family: sans-serif, arial;
+}
+
+.page-shell{
+  box-sizing: border-box;
+  text-align: left;
+  width: 970px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 40px;
+  font-weight: 600;
+  font-family: 'Droid Serif', serif;
+}
+
+div{
+  box-sizing: border-box;
+}
+
+nav.top-nav{
+  background-color: #000;
+}
+
+nav.top-nav a{
+  box-sizing: border-box;
+  font-family: 'Droid Serif', serif;
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 8px 15px;
+  border-right: 1px solid #ccc;
+  text-align: center;
+  min-width: 100px;
+}
+
+nav.top-nav a:first-child{
+  border-left: 1px solid #ccc;
+}
+
+nav.top-nav a:hover{
+  background-color: #666;
+}
+
+.page-header{
+  padding: 25px 0;
+  border-bottom: 5px solid #000;
+}
+
+.page-body{
+  padding: 15px 0;
+  min-height: 200px;
+}
+
+nav.breadcrumb {
+  margin-bottom: 16px;
+  color: #666;
+}
+
+nav.breadcrumb a{
+  color: #000;
+    text-decoration: none;
+}
+
+nav.breadcrumb a:hover{
+  text-decoration: underline;
+}
+
+.container{
+  padding: 0 15px;
+}
+
+.page-footer{
+  padding: 15px 0;
+  border-top: 5px solid #000;
+}
+
+.page-body h1{
+   font-size: 24px;
+   margin-bottom: 16px;
+   color: #666;
+}
+
+input,select{
+  font-size: 100%;
+  border: 1px solid #ddd;
+  padding: 5px;
+}
+
+.form .row{
+  overflow: hidden;
+  padding: 10px 0;
+}
+
+.form .row .label{
+  display: inline-block;
+  width: 100px;
+}
+.form .row .input{
+  display: inline-block;
+}
